@@ -1,6 +1,7 @@
 import storage from '../../assets/kelleyinc-storage-main.png'
 import kwash from '../../assets/kelleyinc-kwash-main.png'
 import truckWash from '../../assets/kelleyinc-truckwash-main.png'
+import mainOffice from '../../assets/kelleyinc-building-main.png'
 
 export default function Hero() {
   const businesses = [
@@ -26,16 +27,19 @@ export default function Hero() {
 
   return (
     <div className='hero'>
-      {
-        businesses?.map((business, index) => (
-          <div className='business-card' key={index}>
-            <img src={business.image} alt={business.name}/>
-            <h2>{business.name}</h2>
-            <p>{business.address}</p>
-            <p>{business.location}</p>
-          </div>
-        ))
-      }
+      <div className='hero-businesses'>
+        {
+          businesses?.map((business, index) => (
+            <div className='business-card' key={index}>
+              <img src={business.image} alt={business.name}/>
+              <h2>{business.name}</h2>
+              <p>{business.address}</p>
+              <p>{business.location}</p>
+            </div>
+          ))
+        }
+      </div>
+      <img src={mainOffice} alt='Kelley Electric INC Office'/>
     </div>
   )
 }
