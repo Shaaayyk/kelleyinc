@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import logo from '../../../assets/kelleyinc-logo.png'
+import './Nav.css'
 
 export default function Nav() {
   return (
